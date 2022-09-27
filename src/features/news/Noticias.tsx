@@ -47,16 +47,16 @@ const Noticias = () => {
           })
           .join(" ");
 
-        const hora = new Date();
-        const minutosDecorrido = Math.floor(
-          (hora.getTime() - n.date.getTime()) / 60000
+        const hour = new Date();
+        const minutes = Math.floor(
+          (hour.getTime() - n.date.getTime()) / 60000
         );
 
         return {
           id: n.id,
           titulo,
           description: n.description,
-          date: `Faz ${minutosDecorrido} minutos`,
+          date: `Faz ${minutes} minutos`,
           premium: n.premium,
           image: n.image,
           descriptionCurto: n.description.substring(0, 100),
